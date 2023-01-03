@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  /* Для демонстрации */
+  width: 260px;
+  margin: 50px auto; 
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  height: 80px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
