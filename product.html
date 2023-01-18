@@ -7,78 +7,132 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic&amp;display=swap">
   <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style-product.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page-body inner-page">
+<body class="page-body">
 
   <header class="main-header">
-    <nav class="main-navigation container">
-      <a class="main-header-logo" href="product.html">
-        <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+    <nav class="main-navigation">
+      <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
       </a>
-      <ul class="site-navigation">
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Новости</a></li>
-        <li><a href="price.html">Прайс-лист</a></li>
-        <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
-        <li><a href="blank.html">Контакты</a></li>
-      </ul>
-      <div class="user-navigation">
-        <a class="login-link" href="login.html">Вход</a>
+      <div class="main-navigation-wrapper">
+        <div class="container">
+          <ul class="site-navigation">
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Новости</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="blank.html">Контакты</a></li>
+          </ul>
+          <div class="user-navigation">
+            <a class="login-link" href="login.html">Вход</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main class="page-product container">
+  <main class="container">
 
-    <h1 class="page-title">Набор для путешествий «Baxter of California»</h1>
+    <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
-    <ul class="breadcrumbs">
-      <li><a href="product.html">Главная</a></li>
-      <li><a href="catalog.html">Магазин</a></li>
-      <li><a href="catalog.html">Средства для ухода</a></li>
-      <li class="breadcrumbs-current">Набор для путешествий «Baxter of California»</li>
-    </ul>
-
-    <section class="product-photos">
-      <h2 class="visually-hidden">Изображения товара</h2>
-      <img class="product-photo-full" src="img/product-big.jpg" width="460" height="498" alt="Фото всего набора">
-      <ul class="product-photo-preview">
-        <li>
-          <img src="img/product-small-1.jpg" width="140" height="149" alt="Фото в анфас">
+    <section class="features">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="features-list">
+        <li class="feature-item">
+          <h3>Быстро</h3>
+          <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной
+            стрижки-минутки!</p>
         </li>
-        <li>
-          <img src="img/product-small-2.jpg" width="140" height="149" alt="Фото в профиль">
+        <li class="feature-item">
+          <h3>Круто</h3>
+          <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
         </li>
-        <li>
-          <img src="img/product-small-3.jpg" width="140" height="149" alt="Фото отдельной части">
+        <li class="feature-item">
+          <h3>Дорого</h3>
+          <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает
+            определенный статус?</p>
         </li>
       </ul>
     </section>
 
-    <section class="product-info">
-      <h2 class="visually-hidden">Описание товара</h2>
-      <div class="product-description">
-        <p class="product-availability">Есть в наличии</p>
-        <p class="product-article">Артикул: dexter-ae</p>
-      </div>
-      <p class="product-text">Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке
-        находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания,
-        увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
-      <p class="product-price">
-        <b>2 900 ₽</b>
-        <button class="button" type="button">Купить</button>
-      </p>
-      <h3>В набор входят:</h3>
-      <ul>
-        <li>Средство для умывания (50 мл)</li>
-        <li>Увлажняющий крем (50 мл)</li>
-        <li>Крем для бритья (50 мл)</li>
-        <li>Крем после бритья, шампунь (50 мл)</li>
-        <li>Удобная кожаная косметичка</li>
-      </ul>
-    </section>
+    <div class="index-columns">
+
+      <section class="news">
+        <h2>Новости</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+            <time datetime="2020-01-11">11 января</time>
+          </li>
+          <li class="news-item">
+            <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши
+              стройные ряды</p>
+            <time datetime="2020-01-18">18 января</time>
+          </li>
+        </ul>
+        <a class="button" href="blank.html">Все новости</a>
+      </section>
+
+      <section class="gallery">
+        <h2>Фотогалерея</h2>
+        <div class="gallery-container">
+          <figure class="gallery-content">
+            <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+          </figure>
+          <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
+          <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="index-columns">
+
+      <section class="contacts">
+        <h2>Контактная информация</h2>
+        <p>
+          Барбершоп «Бородинский»<br>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+          Телефон: <a href="tel:+78126660266">+7 (812) 666-02-66</a>
+        </p>
+        <p>
+          Время работы:<br>
+          пн—пт: с 10:00 до 22:00<br>
+          сб—вс: с 10:00 до 19:00
+        </p>
+        <a class="button contacts-button-map" href="blank.html">Как проехать</a>
+        <a class="button" href="blank.html">Обратная связь</a>
+      </section>
+
+      <section class="appointment">
+        <h2>Записаться</h2>
+        <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="appointment-item">
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" type="text" name="date" placeholder="01.01.2020">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" type="text" name="time" placeholder="10:00">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" type="text" name="name" placeholder="Борода">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-phone">Телефон</label>
+            <input id="appointment-phone" type="tel" name="phone" placeholder="+7 000 000-00-00">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </section>
+
+    </div>
+
   </main>
 
   <footer class="main-footer">
@@ -155,8 +209,10 @@
       </p>
       <button class="button" type="submit">Войти</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="login-close modal-close" type="button">Закрыть</button>
   </section>
+
+  <script src="login.js"></script>
 
 </body>
 

@@ -24,8 +24,8 @@
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-black);
-  background-image: url("img/bg.jpg");
-  background-position: 50% 0;
+  background-image: url("../img/bg.jpg");
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -38,7 +38,9 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -237,7 +239,7 @@ img {
   left: 24px;
   width: 16px;
   height: 18px;
-  background-image: url("img/login.svg");
+  background-image: url("../img/login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
@@ -307,9 +309,9 @@ img {
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
   background-image:
-    url("img/line.png"),
-    url("img/pattern-light.jpg");
-  background-position: 50%, 0 0;
+    url("../img/line.png"),
+    url("../img/pattern-light.jpg");
+  background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
 }
 
@@ -343,34 +345,6 @@ img {
 
 .news-item time {
   text-transform: none;
-}
-
-/* Button */
-
-.button {
-  display: inline-block;
-  margin-right: 16px;
-  padding: 10px 30px;
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
-  background-color: var(--basic-black);
-  border: none;
-}
-
-.button:hover,
-.button:focus,
-.button:active {
-  background-color: var(--special);
-}
-
-.button.disabled,
-.button:disabled {
-  cursor: default;
-  opacity: 0.5;
-  background-color: var(--basic-black);
 }
 
 /* Gallery */
@@ -412,6 +386,34 @@ img {
   right: 0;
 }
 
+/* Button */
+
+.button {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 30px;
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-black);
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--special);
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--basic-black);
+}
+
 /* Contacts */
 
 .contacts {
@@ -421,11 +423,6 @@ img {
 .contacts p {
   margin: 0;
   margin-bottom: 25px;
-}
-
-.contacts-phone {
-  text-decoration: underline;
-  color: var(--basic-black);
 }
 
 /* Appointment */
@@ -447,8 +444,7 @@ img {
 
 .appointment-item {
   width: 140px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .appointment-item label {
@@ -483,7 +479,7 @@ img {
 .inner-page {
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
-  background-image: none;
+  background-image: url("../img/pattern-light.jpg");
   background-position: 0 0;
   background-repeat: repeat;
 }
@@ -554,12 +550,20 @@ img {
 
 /* Big heading */
 
+.inner-content .big-heading {
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 65px;
+  font-size: 48px;
+  line-height: 48px;
+}
+
 .big-heading::before,
 .big-heading::after {
   content: "";
   flex-grow: 1;
   flex-shrink: 0;
-  width: 50px;
   height: 2px;
   background: var(--basic-black);
 }
@@ -572,22 +576,12 @@ img {
   margin-left: 25px;
 }
 
-.inner-content .big-heading {
-  display: flex;
-  align-items: center;
-  margin-top: 55px;
-  margin-bottom: 65px;
-  font-size: 48px;
-  line-height: 48px;
-  text-align: center;
-}
-
 /* Inner columns */
 
 .inner-columns {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 60px 0;
 }
 
@@ -607,8 +601,8 @@ img {
 }
 
 .inner-columns > h3:first-child {
-  width: 100%;
   margin-top: 0;
+  width: 100%;
 }
 
 /* Custom list */
@@ -635,6 +629,8 @@ img {
   background-color: var(--basic-black);
   transform: rotate(45deg);
 }
+
+/* Custom table*/
 
 .custom-table-1 {
   width: 100%;
@@ -705,8 +701,6 @@ img {
   width: 220px;
   height: 165px;
   margin: 0;
-  object-fit: contain;
-  background-color: #f7f7f7;
 }
 
 .catalog-item-price {
@@ -726,6 +720,7 @@ img {
 }
 
 .catalog-item-price .button {
+  width: 50px;
   padding: 13px 18px 11px;
   margin-right: 0;
   line-height: 20px;
@@ -796,7 +791,7 @@ img {
   left: -38px;
   width: 12px;
   height: 12px;
-  background-image: url("img/cross.svg");
+  background-image: url("../img/cross.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1047,7 +1042,7 @@ img {
   margin-top: 65px;
   color: var(--basic-white);
   background-color: var(--basic-extra-dark);
-  background-image: url("img/pattern-dark.jpg");
+  background-image: url("../img/pattern-dark.jpg");
   background-position: 0 0;
   background-repeat: repeat;
 }
@@ -1056,7 +1051,7 @@ img {
   margin-top: 45px;
   background-image:
     linear-gradient(to bottom, black, transparent),
-    url("img/pattern-dark.jpg");
+    url("../img/pattern-dark.jpg");
   background-size: 10px 40px, auto;
   background-position: 0 0;
   background-repeat: repeat-x, repeat;
@@ -1074,6 +1069,10 @@ img {
 
 .footer-contacts p {
   margin: 0;
+}
+
+.footer-contacts address {
+  font-style: normal;
 }
 
 .footer-contacts a {
@@ -1165,7 +1164,7 @@ img {
   display: none;
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
-  background-image: url("img/pattern-light.jpg");
+  background-image: url("../img/pattern-light.jpg");
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
@@ -1187,6 +1186,7 @@ img {
   right: -34px;
   width: 22px;
   height: 22px;
+  font-size: 0;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -1282,16 +1282,14 @@ img {
 }
 
 .login-icon-user {
-  background-image: url("img/user.svg");
-  background-position: 270px 50%;
-  background-size: 13px;
+  background-image: url("../img/user.svg");
+  background-position: 270px center;
   background-repeat: no-repeat;
 }
 
 .login-icon-password {
-  background-image: url("img/lock.svg");
-  background-position: 270px 50%;
-  background-size: 13px;
+  background-image: url("../img/lock.svg");
+  background-position: 270px center;
   background-repeat: no-repeat;
 }
 
@@ -1355,4 +1353,46 @@ img {
 .restore:hover,
 .restore:focus {
   text-decoration: none;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
